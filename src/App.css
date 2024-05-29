@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*navbar section*/
+.nav-section{
+    background-color: #123bd0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: large;
+}
+
+.user-auth button{
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/*sidebar section*/
+
+.sidebar-section{
+    width: 100%;
+    max-width: 15%;
+    min-height: 90vh;
+    padding-top: 10px;
+    background-color: #1C3144;
+    color: #ffffff;
+}
+
+.sidebar-section ul li{
+    list-style-type: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: large;
+    cursor: pointer;
+}
+
+.collection-section{
+    display: flex;
+}
+
+/* 1rem = 16px */
+
+/* LoginSection */
+
+.login-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* register-section */
+
+.register-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.auth-form{
+    width: 100%;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px grey;
+    padding: 10px;
+}
+.auth-form h3{
+    color: #440381;
+}
+
+.auth-form input{
+    width: 100%;
+    max-width: 70%;
+    height: 1.6rem;
+}
+
+.auth-form label{
+    width: 100%;
+    max-width: 71%;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.btn-submit button{
+    background-color: #123bd0;
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* firm section add firm */
+
+
+.firm-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.table-form{
+    width: 100%;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px grey;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.table-form input{
+    width: 100%;
+    max-width: 70%;
+    height: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.checkbox-input{
+    width: 100%;
+    max-width: 70%;
+}
+
+.checkbox-container{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.checkbox-container label{
+    width: 100%;
+    max-width: 20%;
+    margin-bottom: 10px;
+}
+
+.checkbox-container input{
+    width: 100%;
+    max-width: 20%;
+    margin-bottom: 10px;
+}
+
+.table-form label{
+    width: 100%;
+    max-width: 70%;
+    font-weight: 500;
+}
+.table-form h3{
+    color: #440381;
+}
+
+/* product section */
+
+.product-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*products table*/
+
+.product-table{
+    width: 100vw;
+    max-width: 80vw;
+    border: 1px solid red;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.product-table th,td{
+    border: 1px solid red;
+}
+
+.product-image{
+    width: 100px;
+    height: 100px;
+}
+
+
+.page-notfound{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-img{
+    width: 200px;
+    height: 200px;
+}
+
+.go-back{
+    color: #123bd0;
+}
