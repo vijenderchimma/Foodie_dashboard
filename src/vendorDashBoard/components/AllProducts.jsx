@@ -31,6 +31,7 @@ const AllProducts = () => {
             setProducts(productData.products.filter(product=> product._id !== productId))
             confirm("Are you sure, you want to delete")
             alert("Product deleted Successfully")
+            window.location.reload()
         } catch (error) {
             console.log(error)
             alert("Failed to delte product")
