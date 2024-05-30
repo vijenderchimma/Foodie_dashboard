@@ -32,11 +32,11 @@ const Login = ({showWelcomeHandler}) => {
           console.log(vendorFirmName)
           localStorage.setItem('firmId',vendorFirmId)
           localStorage.setItem('firmName',vendorFirmName)
-          window.location.reload()
         }
       } catch (error) {
         console.log(error)
       }
+      window.location.reload()
     } catch (error) {
       console.log(error)
       alert("Login Failed")
