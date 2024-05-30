@@ -20,26 +20,29 @@ const LandingPage = () => {
   const [showFirmSection,setShowFirmsection] = useState(true)
 
   useEffect(()=>{
-    const firmName = localStorage.getItem('firmName')
-    if(firmName){
-      setShowFirmsection(false)
-    }
-  },[])
-
-  useEffect(()=>{
     const loginToken = localStorage.getItem('token')
     if(loginToken){
       setShowLogOut(true)
     }
   },[])
 
+  useEffect(()=>{
+    const firmName = localStorage.getItem('firmName')
+    if(firmName){
+      setShowFirmsection(false)
+    }
+  },[])
+
+
   const logOutHandler = () => {
-    confirm('Are you sure, you want to logout')
-    localStorage.removeItem('firmId')
-    localStorage.removeItem('token')
-    localStorage.removeItem('firmName')
-    setShowLogOut(false)
-    window.location.reload()
+    const vendorConfirmed = confirm('Are you sure, you want to logout')
+    if (vendorConfirmed){
+      localStorage.removeItem('firmId')
+      localStorage.removeItem('token')
+      localStorage.removeItem('firmName')
+      setShowLogOut(false)
+      window.location.reload()
+    }
   }
 
   const ShowLoginHandler = () => {
@@ -125,7 +128,7 @@ const LandingPage = () => {
             logOutHandler={logOutHandler} ShowRegisterHandler = {ShowRegisterHandler}/>
             <div className="collection-section">
               <Sidebar showFirmSection={showFirmSection} showAllProductsHandler={showAllProductsHandler} showFirmHandler={showFirmHandler} showAddProductHandler= {showAddProductHandler}/>
-              {ShowLogin&& <Login showWelcomeHandler= {showWelcomeHandler}/>}
+              {ShowLogin&& <Login showLogOut = {showLogOut} showWelcomeHandler= {showWelcomeHandler}/>}
               {ShowRegister && <Register ShowLoginHandler = {ShowLoginHandler} />}
               {showFirm && <AddFirm />}
               {showAddProduct && <AddProduct /> }

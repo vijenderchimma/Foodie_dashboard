@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import API_URL from '../../helpers/ApiPath'
 
-const Login = ({showWelcomeHandler}) => {
+const Login = ({showLogOut,showWelcomeHandler}) => {
 
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -20,6 +20,7 @@ const Login = ({showWelcomeHandler}) => {
         alert('Login Success')
         localStorage.setItem('token',data.token)
         showWelcomeHandler()
+        window.location.reload()
       }
       try {
         const vendorId = response.data.vendorId
