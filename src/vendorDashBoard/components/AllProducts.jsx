@@ -48,7 +48,6 @@ const AllProducts = () => {
                     <tr>
                         <th>Product Name</th>
                         <th>Price</th>
-                        <th>Offer</th>
                         <th>Image</th>
                         <th>Delete</th>
                     </tr>
@@ -59,7 +58,6 @@ const AllProducts = () => {
                     <tr key = {item._id}>
                         <td>{item.productName}</td>
                         <td>{item.price}</td>
-                        <td>{item.offer}</td>
                         <td>{item.image && (<img src = {`${API_URL}/uploads/${item.image}`}
                         alt = {item.productName} className='product-image'/>)}</td>
                         <td><button onClick={()=>deleteProductById(item._id)}>Delete</button></td>
