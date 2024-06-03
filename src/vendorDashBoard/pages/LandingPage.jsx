@@ -34,12 +34,14 @@ const LandingPage = () => {
   },[])
 
   const logOutHandler = () => {
-    confirm('Are you sure, you want to logout')
-    localStorage.removeItem('firmId')
-    localStorage.removeItem('token')
-    localStorage.removeItem('firmName')
-    setShowLogOut(false)
-    window.location.reload()
+    const confirmed = confirm('Are you sure, you want to logout')
+    if(confirmed){
+      localStorage.removeItem('firmId')
+      localStorage.removeItem('token')
+      localStorage.removeItem('firmName')
+      setShowLogOut(false)
+      window.location.reload()
+    }
   }
 
   const ShowLoginHandler = () => {

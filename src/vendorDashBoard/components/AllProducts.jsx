@@ -11,7 +11,7 @@ const AllProducts = () => {
         console.log(firmId)
         try {
             const response = await axios.get(`${API_URL}/products/get-products/${firmId}`)
-            setProducts(response.data)
+            setProducts(response.data.products)
             console.log(response.data)
         } catch (error) {
             console.log(error)
@@ -29,9 +29,12 @@ const AllProducts = () => {
         try {
             const deleteResponse = await axios.delete(`${API_URL}/products/delete/${productId}`)
             setProducts(productData.products.filter(product=> product._id !== productId))
-            confirm("Are you sure, you want to delete")
-            alert("Product deleted Successfully")
-            window.location.reload()
+            const confirmed = confirm("Are you sure, you want to delete")
+            if (confirmed){
+                alert("Product deleted Successfully")
+                window.location.reload()
+            }    
+            
         } catch (error) {
             console.log(error)
             alert("Failed to delte product")
@@ -52,7 +55,7 @@ const AllProducts = () => {
                         <th>Delete</th>
                     </tr>
                 </thead>
-                <tbody>{productData.products.map((item)=>{
+                <tbody>{productData.map((item)=>{
                     return (
                     <>
                     <tr key = {item._id}>
