@@ -14,3 +14,5 @@ const Sidebar = ({showFirmSection,showAllProductsHandler,showFirmHandler,showAdd
 }
 
 export default Sidebar
+
+
